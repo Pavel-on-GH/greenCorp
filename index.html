@@ -29,6 +29,10 @@ integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEB
       <img class="about__sun-image" src="img/sun.png">
       <img class="about__image" src="img/solar-panel.png">
     </div>
+
+    <canvas class="orb-canvas" id="orb-canvas">
+    </canvas>
+
   </section>
 
 <section class="features" id="features">
@@ -65,9 +69,9 @@ integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEB
   <div class="features__feedback">
     <div class="features__feedback-left">
       <h2>
-         Нам доверяет
+        Нам доверяет
         <br>
-         5000+ счастливых клиентов
+        <div class="features__clients-count">5000+</div> счастливых клиентов
       </h2>
       <p>
          Мы помогли тысячам людей перейти на зеленую энергию.
@@ -116,38 +120,42 @@ integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEB
 </section>
   
 
-  <section class="form">
-        <form>
-      <div class="form__container">
-        <h1>Оставьте свои контакты</h1>
-        <p>Поможем подобрать модель. <br>Выбрать удобный вариант доставки и установки. <br>Гарантия возврата денег.</p>      
-      </div>
-      <div class="form__group">
-        <label for="name">Ваше имя</label>
-        <input type="text" placeholder="Введите имя" id="name">
-      </div>
-      <div class="form__group">
-        <label for="email">Электронный адрес</label>
-        <input type="email" placeholder="***@yandex.ru" id="email">
-      </div>
-      <div class="form__group">
-        <label for="phone">Номер телефона</label>
-        <input type="tel" placeholder="7 (999) 999-99-99" id="phone">
-      </div>
-      <div class="form__group">
-        <label for="budget">Примерный бюджет</label>
-        <select id="budget">
-          <option value="">Выберите вариант</option>
-          <option value="10-30">10 000₽ – 30 000₽</option>
-          <option value="30-60">30 000₽ – 60 000₽</option>
-          <option value="60-100">60 000₽ – 100 000₽</option>
-          <option value="100+">100 000₽</option>
-        </select>
-      </div>
-      <button type="submit" class="form__submit">Отправить заявку<i class="fas fa-angle-right"></i></button>
-
-    </form>
-  </section>
+<section class="form" id="form">
+	<div class="form_container">
+		<div>
+			<h1>Оставьте свои контакты</h1>
+			<p>Поможем подобрать модель. <br>Выбрать удобный вариант доставки и установки. <br>Гарантия возврата денег.
+			</p>
+		</div>			
+		<form>
+	<div class="form__group">
+		<label for="name">Ваше имя</label>
+		<input type="text" placeholder="Введите имя" id="name">
+	</div>
+	<div class="form__group">
+		<label for="email">Электронный адрес</label>
+		<input type="email" placeholder="***@yandex.ru" id="email">
+	</div>
+	<div class="form__group">
+		<label for="phone">Номер телефона</label>
+		<input type="tel" placeholder="7 (999) 999-99-99" id="phone">
+	</div>
+	<div class="form__group">
+		<label for="select">Примерный бюджет</label>
+		<select name="Примерный бюджет" id="budget">
+			<option disabled selected>Выберите вариант</option>
+			<option value="10-30">10 000р - 30 000р</option>
+			<option value="30-60">30 000р - 60 000р</option>
+			<option value="60-100">60 000р - 100 000р</option>
+			<option value="other"> Другое	</option>		
+		</select>
+	</div>
+			<button type="submit" class="form__submit">Отправить заявку
+			</button>
+</form>
+		</div>
+	</div>
+</section>
 
 
 <footer>
@@ -184,6 +192,9 @@ integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEB
   <div class="footer__copyright">GreenCorp © 2021</div>
 </footer>
 
+   <!-- /* ... */ -->
+   <script src="js/canvas.js"></script>
+   <script src="js/animations.js"></script>
 </body>
 
 </html>
